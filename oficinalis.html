@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nossa História - Oficinallis Pharma</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #8e1f3d;
+      color: white;
+      overflow-y: auto;
+    }
+
+    .background-plus {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .background-plus .plus {
+      position: absolute;
+      font-size: 160px;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.05);
+      font-family: Arial, sans-serif;
+    }
+
+    .plus.one {
+      top: 80px;
+      left: 30px;
+    }
+
+    .plus.two {
+      bottom: 100px;
+      right: 30px;
+      font-size: 130px;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 100px 120px;
+      max-width: 1200px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      border-left: 6px solid #fff;
+      padding-left: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.9;
+      margin-bottom: 22px;
+      text-align: justify;
+    }
+
+    ul {
+      margin: 10px 0 30px 40px;
+      list-style: square;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 60px 30px;
+      }
+
+      h1 {
+        font-size: 36px;
+        padding-left: 15px;
+      }
+    }
+
+    .mv-section {
+  background-color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.mv-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mv-item {
+  flex: 1 1 300px;
+  max-width: 380px;
+}
+
+.mv-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #8c1f3d;
+  border-radius: 0 50% 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.mv-icon:hover {
+  background-color: #333;
+}
+
+.mv-icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.mv-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.mv-item p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.salas-section {
+  background-color: white;
+  padding: 4rem 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.salas-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.salas-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.salas-container h2 span {
+  color: #8c1f3d;
+  font-weight: 600;
+}
+
+.salas-container p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.salas-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.salas-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.salas-grid img:hover {
+  transform: scale(1.03);
+}
+
+.voltar-btn-container {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.voltar-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #8c1f3d;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.voltar-btn:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.voltar-topo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #8c1f3d;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.voltar-topo:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="voltar-topo" title="Voltar à Página Inicial">← Início</a>
+
+  
+  <div class="background-plus">
+    <div class="plus one">+</div>
+    <div class="plus two">+</div>
+  </div>
+  <div class="container">
+    <h1>Nossa História</h1>
+    <p>
+      A Oficinallis Pharma foi fundada em 1989 com o propósito de prestar serviço de qualidade à população e aos profissionais de saúde. Hoje, percebemos que é cada vez maior a necessidade da farmácia de manipulação e da indústria caminharem juntas para alcançarem o objetivo do comércio farmacêutico e de contribuir para o bem estar das pessoas.
+    </p>
+    <p>
+      A farmácia de manipulação preenche algumas lacunas que a indústria não consegue, e por sua vez, a indústria com a pesquisa de novos fármacos traz enormes avanços no campo da terapia medicamentosa.
+    </p>
+    <p>
+      Desde sua fundação, a Oficinallis Pharma permanece com firme atuação nos seus objetivos:
+    </p>
+    <ul>
+      <li>Respeito às normas determinadas pela ANVISA;</li>
+      <li>Respeito ao receituário médico e aos profissionais de saúde;</li>
+      <li>Respeito aos clientes, fornecedores e colaboradores.</li>
+    </ul>
+    <p>
+      Para atender à necessidade dos diversos pacientes, temos opções terapêuticas atualizadas e diferenciadas da indústria, sendo um recurso a mais na hora da prescrição, obtendo formulações que a indústria não consegue devido às diversas formas farmacêuticas, dosagens e estabilidade do fármaco, além da possibilidade de fazer associações medicamentosas que melhoram o esquema posológico e a adesão do paciente ao tratamento.
+    </p>
+    <p>
+      Nosso trabalho tem início no contínuo aprimoramento dos colaboradores que são altamente capacitados e qualificados a fim de melhorar os processos de manipulação para satisfazer os mais rigorosos consumidores. As matérias primas são provenientes dos melhores fornecedores do mercado, cadastrados na ANVISA e qualificados por um processo de seleção da Anfarmag (Associação Nacional de Farmacêuticos Magistrais).
+    </p>
+    <p>
+      Toda matéria prima recebida passa por análise físico-química através do nosso setor de qualidade e da parceria com a PROQUIMO, para a realização de outras análises que exigem maior complexidade. Os procedimentos operacionais são todos padronizados e documentados de acordo com a RDC 67, garantindo as boas práticas de manipulação com qualidade e segurança para o profissional de saúde prescritor e seus pacientes.
+    </p>
+  </div>
+
+  <section class="mv-section">
+    <div class="mv-container">
+      <div class="mv-item">
+        <div class="mv-icon">
+          <svg viewBox="0 0 24 24"><path fill="white" d="M12 3C7 3 2.73 7.11 2 12c.73 4.89 5 9 10 9s9.27-4.11 10-9c-.73-4.89-5-9-10-9zm1 13h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+        </div>
+        <h3>MISSÃO</h3>
+        <p>Manipular medicamentos e dispensá-los com qualidade, atendendo às necessidades individuais de cada cliente promovendo a saúde e o bem estar para garantir a satisfação através da excelência no atendimento.</p>
+      </div>
+  
+      <div class="mv-item">
+        <div class="mv-icon">
+          <svg viewBox="0 0 24 24"><path fill="white" d="M12 4.5C7.3 4.5 3.2 7.36 1 12c2.2 4.64 6.3 7.5 11 7.5s8.8-2.86 11-7.5c-2.2-4.64-6.3-7.5-11-7.5zm0 13c-2.5 0-4.5-2.24-4.5-5s2-5 4.5-5 4.5 2.24 4.5 5-2 5-4.5 5zm0-2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
+        </div>
+        <h3>VISÃO</h3>
+        <p>Ser líder e referência nas regiões onde atua em manipulação e medicamentos personalizados, com inovação e tecnologia.</p>
+      </div>
+  
+      <div class="mv-item">
+        <div class="mv-icon">
+          <svg viewBox="0 0 24 24"><path fill="white" d="M14 2H6a2 2 0 0 0-2 2v18l4-4h6a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+        </div>
+        <h3>VALORES</h3>
+        <p>Respeito e ética profissional; compromisso social; compromisso com os clientes; valorização dos colaboradores; inovação em fórmulas manipuladas com crescimento contínuo e sustentável.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="salas-section">
+    <div class="salas-container">
+      <h2><span>SALAS</span> ESPECIALIZADAS</h2>
+      <p>
+        Para cumprir as boas práticas de manipulação exigidas pela <strong>ANVISA</strong>, especialmente nos casos de hormônios, antibióticos e citostáticos, a <strong>OFICINALLIS PHARMA</strong> investiu em tecnologia na construção de salas para a manipulação de cada uma das três classes terapêuticas.
+      </p>
+      <p>
+        As salas (cabines individualizadas) com sistema de exaustão independentes e de eficiência comprovada são dotadas de antecâmara com pressão negativa em relação às áreas adjacentes, sendo projetadas de forma a impedir o lançamento de partículas no laboratório evitando a contaminação cruzada e protegendo o manipulador e o meio ambiente.
+      </p>
+  
+      <div class="salas-grid">
+        <img src="mnt/data/sala1.jpg" alt="Sala 1">
+        <img src="mnt/data/sala2.jpg" alt="Sala 2">
+        <img src="mnt/data/sala3.jpg" alt="Sala 3">
+        <img src="mnt/data/sala4.jpg" alt="Sala 4">
+        <img src="mnt/data/sala5.jpg" alt="Sala 5">
+        <img src="mnt/data/sala6.jpg" alt="Sala 6">
+        <img src="mnt/data/sala7.jpg" alt="Sala 7">
+        <img src="mnt/data/sala8.jpg" alt="Sala 8">
+      </div>
+    </div>
+
+    <div class="voltar-btn-container">
+      <a href="index.html" class="voltar-btn">← Voltar à Página Inicial</a>
+    </div>
+    
+
+  </section>
+  
+  
+
+</body>
+</html>

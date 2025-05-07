@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mais Oficinallis</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #8e1f3d;
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .background-plus {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .background-plus .plus {
+      position: absolute;
+      font-size: 160px;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.07);
+      font-family: Arial, sans-serif;
+    }
+
+    .plus.one {
+      top: 0px;
+      left: 0px;
+    }
+
+    .plus.two {
+      bottom: 0px;
+      left: 650px;
+      font-size: 330px;
+    }
+
+    .plus.three {
+      bottom: 300px;
+      left: 450px;
+      font-size: 230px;
+    }
+
+    .plus.four {
+      bottom: 560px;
+      left: 350px;
+      font-size: 130px;
+    }
+
+    .plus.five {
+      bottom: 400px;
+      left: 550px;
+      font-size: 430px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      padding: 60px 80px 40px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    .left img {
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .right {
+      margin-left: auto;
+      width: 47%;
+      padding-left: 80px;
+      z-index: 2;
+    }
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    .logo .plus {
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 60px;
+    }
+
+    .logo .mais {
+      font-style: italic;
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: block;
+      margin-left: 10px;
+    }
+
+    .logo-text {
+      font-size: 36px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+
+    .rules {
+      font-size: 15px;
+      line-height: 1.4;
+      max-width: 540px;
+    }
+
+    .rules ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .rules li {
+      margin-bottom: 4px;
+    }
+
+    .rules strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 1100px) {
+      .right {
+        padding-left: 40px;
+      }
+    }
+
+    .voltar-topo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #8c1f3d;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.voltar-topo:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="voltar-topo" title="Voltar à Página Inicial">← Início</a>
+
+  <div class="background-plus">
+    <div class="plus one">+</div>
+    <div class="plus two">+</div>
+    <div class="plus three">+</div>
+    <div class="plus four">+</div>
+    <div class="plus five">+</div>
+  </div>
+
+  <div class="container">
+    <div class="left">
+      <img src="mnt/data/homem.png" alt="Homem sorrindo">
+    </div>
+    <div class="right">
+      <div class="logo">
+        <div class="plus">+</div>
+        <span class="mais">mais</span>
+        <div class="logo-text">OFICINALLIS</div>
+        <div class="subtitle">CLUBE DE VANTAGENS</div>
+      </div>
+      <div class="description">
+        O CLUBE DE VANTAGENS É UM SERVIÇO GRATUITO, EXCLUSIVO DA<br>
+        NOSSA FARMÁCIA, FEITO PARA QUE OS NOSSOS CLIENTES ADQUIRAM MAIS DESCONTOS.
+      </div>
+      <div class="rules">
+        <strong>REGRAS:</strong>
+        <ul>
+          <li>Ao encomendar sua medicação nossos atendentes irão atualizar seu cadastro com nome completo, CPF, RG e endereço.</li>
+          <li>Toda vez que for encomendar a fórmula será concedido 25% de descontos nas compras feitas à vista ou no cartão de crédito/débito, acima de 65 anos o desconto será de 30%.</li>
+          <li>Ao realizar seu cadastro em nossa farmácia automaticamente acumula 10 pontos.</li>
+          <li>A cada R$ 8,00 gastos em medicamentos manipulados você acumula 1 ponto.</li>
+          <li>Ao acumular 100 pontos poderá ser solicitado um desconto de 40% na próxima encomenda.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
