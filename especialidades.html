@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Especialidades - Oficinallis</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      padding-top: 4rem;
+    }
+
+    .topo-voltar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #8c1f3d;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      z-index: 1000;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .topo-voltar:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    .page-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .titulo-pagina {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    .titulo-pagina span {
+      color: #8c1f3d;
+      font-weight: 600;
+    }
+
+    .especialidade-bloco {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      background-color: #eee;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+    }
+
+    .especialidade-bloco img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .especialidade-conteudo {
+      flex: 1;
+    }
+
+    .especialidade-conteudo h3 {
+      color: #8c1f3d;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .especialidade-conteudo p {
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .especialidade-bloco {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .especialidade-bloco img {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .especialidade-conteudo {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html#especialidades" class="topo-voltar">← Início</a>
+
+  <div class="page-container">
+    <h1 class="titulo-pagina">NOSSAS <span>ESPECIALIDADES</span></h1>
+
+    <div class="especialidade-bloco" id="esp1">
+      <img src="mnt/data/especialidade1.png" alt="Medicamentos Alopáticos">
+      <div class="especialidade-conteudo">
+        <h3>MEDICAMENTOS ALOPÁTICOS</h3>
+        <p>Produto farmacêutico, tecnicamente obtido ou elaborado, com finalidade profilática, curativa, paliativa ou para fins de diagnóstico.</p>
+        <p>Alopatia é um sistema terapêutico que visa tratar as patologias pelos meios contrários às mesmas, através de medicamentos com ação específica nos sintomas. É a chamada medicina tradicional.</p>
+        <p>O medicamento manipulado é caracterizado pela preparação personalizada destinada ao paciente de acordo com a prescrição realizada pelo profissional habilitado, as dosagens são especialmente individualizadas conforme a necessidade terapêutica do mesmo, que conta com o benefício de consumir um medicamento de qualidade através de matéria prima selecionada.</p>
+      </div>
+    </div>
+
+    <div class="especialidade-bloco" id="esp2">
+      <img src="mnt/data/especialidade2.png" alt="Fitoterápicos">
+      <div class="especialidade-conteudo">
+        <h3>FITOTERÁPICOS</h3>
+        <p>A palavra Fitoterapia tem origem grega e resulta da combinação dos termos Phito = plantas e Therapia = tratamento e, de acordo com o Dicionário Aurélio da Língua Portuguesa, seu significado é “tratamento de doença mediante o uso de plantas”. É o estudo das plantas medicinais e suas aplicações nos tratamentos de morbidades, seja na prevenção, alívio ou cura das doenças.</p>
+        <p>Consiste na utilização externo ou interno de vegetais in natura ou na forma de medicamentos. Para isso, utilizam-se nas preparações diferentes partes da planta, como raiz, casca, flores ou folhas, sendo o chá a mais utilizada, preparado por meio da decocção ou infusão.</p>
+        <p>De acordo com a ANVISA (2004), fitoterápico é todo medicamento obtido empregando-se exclusivamente matérias-primas vegetais. Na sua preparação, podem ser utilizados adjuvantes farmacêuticos permitidos na legislação vigente. É o produto final, acabado e rotulado. Sua eficácia e segurança é validada por meio de levantamentos etnofarmacológicos de utilização, documentações tecnocientíficas em publicações ou ensaios clínicos fase 3. Não se considera medicamento fitoterápico aquele que, na sua composição, inclua sustâncias ativas isoladas, de qualquer origem, nem as associações dessas com extratos vegetais.</p>
+      </div>
+    </div>
+
+    <div class="especialidade-bloco" id="esp3">
+      <img src="mnt/data/especialidade3.png" alt="Alimentos Funcionais">
+      <div class="especialidade-conteudo">
+        <h3>ALIMENTOS FUNCIONAIS</h3>
+        <p>Os alimentos funcionais são comercializados e consumidos efetivamente como alimentos no dia-a-dia. Para ser considerado um alimento funcional, é necessário que ele contenha substâncias com propriedades fisiológicas em quantidades suficientes a ponto de fazer diferença no organismo humano. Porém, eles não são considerados terapêuticos, ou seja, apesar de estarem associados à redução do risco de doenças, não as previne. Iogurte probiótico e pão enriquecido com ômega 3 são exemplos de alimentos funcionais.</p>
+      </div>
+    </div>
+
+    <div class="especialidade-bloco" id="esp4">
+      <img src="mnt/data/especialidade4.png" alt="Nutracêuticos">
+      <div class="especialidade-conteudo">
+        <h3>NUTRACÊUTICOS</h3>
+        <p>Nutracêuticos: Esse termo vem da junção de Nutriente + Farmacêuticos, pois os nutrientes têm a capacidade comprovada de proporcionar benefícios à saúde, como a prevenção e o tratamento de doenças suprindo as necessidades do organismo.</p>
+        <p>É definida como nutracêutico não uma droga ou um alimento, mas “uma substância de ocorrência natural com evidente efeito benéfico à saúde que faça parte, como ingrediente, de alimentos específicos, alimentos funcionais ou suplementos alimentares”.</p>
+        <p>O termo nutracêutico vem sendo utilizado para demonstrar o alimento com ação de medicamento, como dizia Hipócrates (460-370 AC) que já afirmava: “Deixe o alimento ser o seu remédio e o remédio seu alimento”.</p>
+      </div>
+    </div>
+
+    <div class="especialidade-bloco" id="esp5">
+      <img src="mnt/data/especialidade5.png" alt="Suplementos Alimentares">
+      <div class="especialidade-conteudo">
+        <h3>SUPLEMENTOS ALIMENTARES</h3>
+        <p>Suplementos alimentares: são usados para acrescentar nutrientes à dieta normal. Pretende-se, com o uso deles, complementar, corrigir ou adaptar dietas para cada indivíduo. Eles são utilizados, na grande maioria, por esportistas, pois fornecem nutrientes necessários às demandas elevadas do esporte. Seriam as formas farmacêuticas como pós, shakes, gomas, chocolates, sopas, soluções, géis comestíveis, cápsulas, comprimidos, sachês, etc....</p>
+      </div>
+    </div>
+
+    <div class="especialidade-bloco" id="esp6">
+      <img src="mnt/data/especialidade6.png" alt="Suplementos Alimentares">
+      <div class="especialidade-conteudo">
+        <h3>COSMÉTICOS</h3>
+        <p>Os cosméticos são produtos que agem na epiderme, que é a camada superficial da pele e que não modificam suas condições fisiológicas. Como exemplo temos as loções, géis e cremes hidratantes, shampoos, sabonetes, esmaltes, perfumes, desodorantes e outros itens de uso diário, que tem como objetivo proteger a pele ou mantê-la em bom estado.</p>
+      </div>
+    </div>
+
+    <div class="especialidade-bloco" id="esp7">
+      <img src="mnt/data/especialidade7.png" alt="Suplementos Alimentares">
+      <div class="especialidade-conteudo">
+        <h3>COSMECÊUTICOS OU DERMOCOSMÉTICOS</h3>
+        <p>Os cosmecêuticos são cosméticos que agem na derme, que é a camada profunda da pele. Sua aplicação traz benefícios a pele através dos ingredientes bioativos com eficácia comprovada através de estudos, possuem propriedades terapêuticas que combatem doenças ou problemas estéticos. Podem ser prescritos em formulações médicas personalizadas.</p>
+        <p>Os cosmecêuticos normalmente, têm funções bem objetivas, como rejuvenescimento, redução de sinais e rugas, fotoproteção, eliminação ou tratamento da acne, entre outros. Eles têm a capacidade de corrigir os danos da pele presentes, repor elementos perdidos com o envelhecimento e funcionam também como prevenção.</p>
+      </div>
+    </div>
+
+    <div class="especialidade-bloco" id="esp8">
+      <img src="mnt/data/especialidade8.png" alt="Suplementos Alimentares">
+      <div class="especialidade-conteudo">
+        <h3>NUTRICOSMÉTICOS</h3>
+        <p>São preparações formuladas com doses de vitaminas, minerais, aminoácidos, ácidos graxos, proteínas, etc... e tem como finalidade repor possíveis deficiências causadoras de rugas, unhas fracas, queda de cabelo, flacidez, entre outros problemas estéticos. Satisfazem alguma deficiência nutricional e ainda proporcionam benefícios à saúde. Essas preparações proporcionam uma beleza de dentro para fora.</p>
+        <p>Os nutricosméticos não são considerados cosméticos, porque como vimos, os cosméticos agem topicamente, mas também não são considerados alimentos. No Brasil, a Anvisa (Agência Nacional de Vigilância Sanitária) enquadra os produtos nutricosméticos como suplementos nutricionais.</p>
+        <p>Ao contrário dos cosméticos convencionais, os nutricosméticos agem no organismo, entrando em ação quando o corpo apresenta alguma deficiência nutricional, repondo essas substâncias internamente e permitindo que componentes de uso tópico como loções, cremes, géis e máscaras tenham seus efeitos potencializados.</p>
+        <p>Alguns dermatologistas afirmam que as “cápsulas da beleza”, ao suprirem carências nutricionais, promovem o rejuvenescimento da pele, postergando a oxidação dos tecidos e melhorando sua aparência e elasticidade como um todo.</p>
+      </div>
+    </div>
+
+    <div class="especialidade-bloco" id="esp9">
+      <img src="mnt/data/especialidade9.png" alt="Manipulação Veterinária">
+      <div class="especialidade-conteudo">
+        <h3>Manipulação Veterinária</h3>
+        <p>A manipulação veterinária é a arte de adaptar medicamentos às necessidades específicas de cada animal, oferecendo tratamentos personalizados, mais eficazes e com melhor aceitação.</p>
+        <p>Seja na forma de comprimidos, xaropes, pastas palatáveis, caldas ou até biscoitos, a manipulação garante doses precisas, sabores agradáveis e facilidade na administração, sempre com segurança e qualidade.</p>
+        Ideal para pets que têm restrições, dificuldades com medicamentos convencionais ou precisam de fórmulas exclusivas.</p>
+      </div>
+    </div>
+
+    
+  </div>
+</body>
+</html>
